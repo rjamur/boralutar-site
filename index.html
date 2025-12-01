@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bora Lutar - Hub de Ativismo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1E1E1E;
+            --text-main: #E0E0E0;
+            --accent: #FFD700; /* Amarelo Luta */
+            --hover: #333333;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Cabeçalho */
+        header {
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+
+        h1 {
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 2.5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            color: var(--accent);
+        }
+
+        p.subtitle {
+            font-size: 1rem;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        /* Lista de Links */
+        .links-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link-card {
+            background-color: var(--card-bg);
+            color: white;
+            padding: 18px 20px;
+            border-radius: 50px; /* Botão pílula */
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Centraliza texto */
+            position: relative;
+            transition: transform 0.2s, background-color 0.2s;
+            border: 2px solid transparent;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        .link-card:hover {
+            transform: scale(1.02);
+            background-color: var(--hover);
+            border-color: var(--accent);
+        }
+
+        .link-card i {
+            position: absolute;
+            left: 25px;
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+
+        /* Rodapé */
+        footer {
+            margin-top: auto;
+            padding: 30px;
+            text-align: center;
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+        
+        /* Destaque para contato */
+        .zap-link {
+            color: #25D366;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>BORA LUTAR</h1>
+        <p class="subtitle">Conectando lutas, ocupando espaços.</p>
+    </header>
+
+    <main class="links-container">
+        
+        <a href="#" class="link-card">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+            Luta Antimanicomial
+        </a>
+
+        <a href="#" class="link-card">
+            <i class="fa-solid fa-person-shelter"></i>
+            População de Rua
+        </a>
+
+        <a href="#" class="link-card">
+            <i class="fa-solid fa-cannabis"></i>
+            Marcha da Maconha
+        </a>
+
+        <a href="#" class="link-card">
+            <i class="fa-solid fa-moon"></i>
+            Anjos Noturnos
+        </a>
+
+        <a href="mailto:contato@boralutar.com.br" class="link-card" style="margin-top: 10px; border: 1px dashed #555;">
+            <i class="fa-solid fa-envelope"></i>
+            Entre em Contato
+        </a>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Bora Lutar.<br>
+        Feito com software livre.</p>
+    </footer>
+
+</body>
+</html>
