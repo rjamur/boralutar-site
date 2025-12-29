@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morar | Direito e Resistência</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .bg-grain {
+            background-color: #0f172a; /* Slate 900 - um azul bem escuro */
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-grain text-gray-100 min-h-screen flex flex-col justify-between">
+
+    <nav class="w-full p-6 flex justify-between items-center border-b border-gray-800">
+        <a href="https://boralutar.com.br" class="text-xl font-bold tracking-tighter hover:text-blue-500 transition-colors">
+            BORALUTAR<span class="text-blue-500">/</span>MORAR
+        </a>
+        <div class="hidden md:block text-sm text-gray-400">Direito não se pede, se conquista.</div>
+    </nav>
+
+    <main class="flex-grow container mx-auto px-6 py-12 md:py-20 max-w-5xl">
+        
+        <header class="mb-16 text-center md:text-left">
+            <h1 class="text-5xl md:text-7xl font-black leading-tight mb-6">
+                A moradia é <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">sagrada.</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 font-light leading-relaxed max-w-3xl">
+                O teto é o começo da dignidade. Aqui você entende a lei sem "juridiquês", encontra apoio contra despejos e se conecta com quem luta pelo direito de viver em paz.
+                <br><span class="text-sm italic opacity-60 mt-2 block">"O meu povo habitará em morada de paz..." (Isaías 32:18)</span>
+            </p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <div class="p-8 border border-gray-700 bg-gray-900 bg-opacity-60 hover:border-blue-500 transition-all duration-300 flex flex-col">
+                <div class="text-blue-500 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-3">Seus Direitos</h3>
+                <p class="text-gray-400 mb-6 flex-grow">A Lei do Inquilinato traduzida. O que o dono pode e o que ele NÃO pode fazer. Saiba quando dizer "não".</p>
+                <button class="w-full py-3 bg-transparent border border-blue-500 text-blue-400 font-bold hover:bg-blue-600 hover:text-white transition-colors uppercase tracking-wider text-sm">
+                    Ler o Guia
+                </button>
+            </div>
+
+            <div class="p-8 border border-gray-700 bg-gray-900 bg-opacity-60 hover:border-red-500 transition-all duration-300 flex flex-col relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-red-600 text-white text-xs font-bold px-3 py-1">EMERGÊNCIA</div>
+                <div class="text-red-500 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-3">SOS Despejo</h3>
+                <p class="text-gray-400 mb-6 flex-grow">Recebeu uma ordem? O proprietário está ameaçando? Fale agora com nossa IA ou deixe recado para a rede de apoio.</p>
+                <button onclick="window.chatwootSDK.toggle('true');" class="w-full py-3 bg-red-600 text-white font-bold hover:bg-red-700 transition-colors uppercase tracking-wider text-sm shadow-lg shadow-red-900/20">
+                    Pedir Ajuda Agora
+                </button>
+            </div>
+
+            <div class="p-8 border border-gray-700 bg-gray-900 bg-opacity-60 hover:border-green-500 transition-all duration-300 flex flex-col">
+                <div class="text-green-500 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-3">Ocupar & Resistir</h3>
+                <p class="text-gray-400 mb-6 flex-grow">Conecte-se com movimentos de moradia, MTST, frentes de luta e advogados solidários. A união faz a força.</p>
+                <button class="w-full py-3 bg-transparent border border-green-500 text-green-400 font-bold hover:bg-green-600 hover:text-white transition-colors uppercase tracking-wider text-sm">
+                    Ver Movimentos
+                </button>
+            </div>
+
+        </div>
+
+        <div class="mt-12 p-6 bg-gray-800 bg-opacity-40 border-l-4 border-blue-500 text-sm text-gray-300 italic">
+            "Artigo 6º: São direitos sociais a educação, a saúde, a alimentação, o trabalho, <strong>a moradia</strong>, o transporte, o lazer, a segurança, a previdência social, a proteção à maternidade e à infância, a assistência aos desamparados..." — Constituição Federal de 1988 (que a gente vai fazer valer).
+        </div>
+
+    </main>
+
+    <footer class="w-full py-8 text-center text-gray-600 text-sm border-t border-gray-900">
+        <p>&copy; 2025 Bora Lutar. Curitiba/Brasil.</p>
+    </footer>
+
+    <script>
+      (function(d,t) {
+        var BASE_URL="https://chat.aiprati.com.br";
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=BASE_URL+"/packs/js/sdk.js";
+        g.async = true;
+        s.parentNode.insertBefore(g,s);
+        g.onload=function(){
+          window.chatwootSDK.run({
+            websiteToken: 'NHx6pkzyys1TixJ66rdDN6Da',
+            baseUrl: BASE_URL
+          })
+        }
+      })(document,"script");
+    </script>
+
+</body>
+</html>

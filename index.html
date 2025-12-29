@@ -46,7 +46,7 @@
                 <p class="text-gray-400">Escreve a porra do livro. Minhas anotações, dores e a busca por sentido. Clarice Lispector encontra o asfalto.</p>
             </a>
 
-            <a href="https://morar.boralutar.com.br" class="group block p-8 border border-gray-700 hover:border-blue-500 transition-all duration-300 bg-gray-900 bg-opacity-50">
+            <a href="morar/index.html" class="group block p-8 border border-gray-700 hover:border-blue-500 transition-all duration-300 bg-gray-900 bg-opacity-50">
                 <div class="mb-4 text-blue-500">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
@@ -69,14 +69,14 @@
             <a href="noias/index.html" class="group block p-8 border border-gray-700 hover:border-purple-500 transition-all duration-300 bg-gray-900 bg-opacity-50">
                 <div class="mb-4 text-purple-500">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                     </svg>
                 </div>
-                <h2 class="text-2xl font-bold mb-2 group-hover:text-purple-500 transition-colors">Noias</h2>
-                <p class="text-gray-400">Os arquivos da mente. Reflexões desconexas, insights perigosos e tudo o que fervilha na cabeça.</p>
+                <h2 class="text-2xl font-bold mb-2 group-hover:text-purple-500 transition-colors">N.O.I.A.S.</h2>
+                <p class="text-gray-400">Núcleo Omni-Channel Inclusivo de Assistência Social. A ponte entre quem precisa de ajuda e a rede de psicólogos, assistentes e voluntários.</p>
             </a>
 
-            <a href="https://deveres.boralutar.com.br" class="group block p-8 border border-gray-700 hover:border-amber-500 transition-all duration-300 bg-gray-900 bg-opacity-50 md:col-span-2">
+            <a href="deveres/index.html" class="group block p-8 border border-gray-700 hover:border-amber-500 transition-all duration-300 bg-gray-900 bg-opacity-50 md:col-span-2">
                 <div class="mb-4 text-amber-500">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
@@ -95,10 +95,26 @@
 
         </div>
     </main>
-    
+
     <footer class="w-full py-8 text-center text-gray-600 text-sm border-t border-gray-900">
         <p>&copy; 2025 Bora Lutar. Curitiba, PR. Feito com a verdade que liberta.</p>
     </footer>
+
+    <script>
+      (function(d,t) {
+        var BASE_URL="https://chat.aiprati.com.br";
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=BASE_URL+"/packs/js/sdk.js";
+        g.async = true;
+        s.parentNode.insertBefore(g,s);
+        g.onload=function(){
+          window.chatwootSDK.run({
+            websiteToken: 'NHx6pkzyys1TixJ66rdDN6Da',
+            baseUrl: BASE_URL
+          })
+        }
+      })(document,"script");
+    </script>
 
 </body>
 </html>
