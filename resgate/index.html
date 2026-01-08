@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resgate e Luta | Conectando a Base</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Identidade Visual de Luta */
+        :root {
+            --vermelho-luta: #c62828;
+            --cinza-escuro: #212529;
+            --azul-chatwoot: #1f93ff;
+        }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        /* Hero Section */
+        .header-luta {
+            background: linear-gradient(135deg, var(--vermelho-luta) 0%, #8e0000 100%);
+            color: white;
+            padding: 80px 0;
+            border-bottom: 5px solid #ffca28; /* Amarelo de destaque */
+        }
+        
+        .btn-acao {
+            background-color: white;
+            color: var(--vermelho-luta);
+            font-weight: bold;
+            border: none;
+            padding: 12px 30px;
+            transition: transform 0.2s;
+        }
+        .btn-acao:hover {
+            transform: scale(1.05);
+            background-color: #f0f0f0;
+        }
+
+        /* Cards de Benefícios */
+        .card-beneficio {
+            border: none;
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            height: 100%;
+            transition: top 0.3s;
+            position: relative;
+            top: 0;
+        }
+        .card-beneficio:hover {
+            top: -10px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        .icon-box {
+            font-size: 2.5rem;
+            color: var(--vermelho-luta);
+            margin-bottom: 20px;
+        }
+
+        /* Simulação do Chatwoot (Widget) */
+        .chat-widget-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 65px;
+            height: 65px;
+            background-color: var(--azul-chatwoot);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 30px;
+            box-shadow: 0 5px 20px rgba(31, 147, 255, 0.4);
+            cursor: pointer;
+            z-index: 9999;
+            animation: pulse-blue 2s infinite;
+        }
+        
+        /* Janela Fake do Chat */
+        .chat-window {
+            position: fixed;
+            bottom: 110px;
+            right: 30px;
+            width: 350px;
+            height: 450px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.2);
+            z-index: 9998;
+            display: none; /* Começa escondido */
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .chat-header {
+            background: var(--azul-chatwoot);
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+        }
+        .chat-body {
+            flex: 1;
+            padding: 15px;
+            background-color: #f5f8fa;
+            overflow-y: auto;
+        }
+        .chat-footer {
+            padding: 15px;
+            background: white;
+            border-top: 1px solid #eee;
+        }
+        
+        /* Balões de Mensagem */
+        .msg {
+            margin-bottom: 10px;
+            max-width: 80%;
+            padding: 10px 15px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+        }
+        .msg-bot {
+            background: white;
+            color: #333;
+            border-bottom-left-radius: 2px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+        .msg-user {
+            background: var(--azul-chatwoot);
+            color: white;
+            align-self: flex-end;
+            margin-left: auto;
+            border-bottom-right-radius: 2px;
+        }
+
+        @keyframes pulse-blue {
+            0% { box-shadow: 0 0 0 0 rgba(31, 147, 255, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(31, 147, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(31, 147, 255, 0); }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fas fa-fist-raised me-2 text-danger"></i>RESGATE E LUTA
+            </a>
+            <span class="navbar-text text-white d-none d-md-block">
+                Democracia para UFPR, UTFPR e Unila
+            </span>
+        </div>
+    </nav>
+
+    <header class="header-luta text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-3">Chega de Centralização.</h1>
+            <p class="lead mb-4">A tecnologia deve servir para ouvir a base, não para controlar.<br>Do HC à Foz do Iguaçu, sua voz tem o mesmo peso.</p>
+            <button class="btn btn-acao rounded-pill shadow" onclick="toggleChat()">
+                <i class="fas fa-comments me-2"></i> Experimente o Atendimento
+            </button>
+        </div>
+    </header>
+
+    <section class="py-5 container">
+        <div class="row g-4 text-center">
+            <div class="col-md-4">
+                <div class="card-beneficio">
+                    <i class="fas fa-map-marked-alt icon-box"></i>
+                    <h4>Fim das Distâncias</h4>
+                    <p class="text-muted">A gestão atual foca no presencial em Curitiba para excluir o interior. Nós usamos a tecnologia para trazer a Unila e os campi avançados para dentro da decisão.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-beneficio">
+                    <i class="fas fa-robot icon-box"></i>
+                    <h4>IA + Plantão Humano</h4>
+                    <p class="text-muted">Dúvidas burocráticas? A IA responde na hora, 24/7. Problemas complexos? Nossos Agentes (nós!) assumimos a conversa para articular a luta.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-beneficio">
+                    <i class="fas fa-vote-yea icon-box"></i>
+                    <h4>Assembléias Híbridas</h4>
+                    <p class="text-muted">Ferramentas seguras para garantir que quem está longe possa debater e votar. Democratizar a participação é nossa prioridade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="fw-bold text-danger mb-3">Como funciona a proposta?</h2>
+                    <p>Ao invés de depender da boa vontade da gestão, criamos nosso próprio <strong>Sistema de Escuta da Base</strong>.</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Usamos <strong>Chatwoot</strong> (Software Livre).</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Nós do coletivo somos os Agentes.</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Histórico unificado: nenhuma demanda se perde.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 text-center mt-4 mt-md-0">
+                    <div class="p-4 bg-light border rounded">
+                        <i class="fas fa-users-cog fa-4x text-secondary mb-3"></i>
+                        <h5>Gestão Coletiva</h5>
+                        <p class="small">Técnicos atendendo Técnicos. Sem burocratas no meio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <small>Coletivo Resgate e Luta 2026 | Desenvolvido com Software Livre</small>
+    </footer>
+
+    <div class="chat-widget-btn" onclick="toggleChat()" title="Fale Conosco">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header d-flex justify-content-between align-items-center">
+            <span><i class="fas fa-robot me-2"></i>Atendimento Resgate</span>
+            <button class="btn btn-sm text-white" onclick="toggleChat()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-body" id="chatBody">
+            <div class="msg msg-bot">
+                Olá, camarada! ✊ Sou a IA do Resgate e Luta.
+            </div>
+            <div class="msg msg-bot">
+                Estamos aqui para garantir que a voz da Unila, UTFPR e interior seja ouvida.
+            </div>
+            <div class="msg msg-bot">
+                Posso tirar dúvidas sobre a próxima assembleia ou chamar um humano do coletivo. Como posso ajudar?
+            </div>
+        </div>
+        <div class="chat-footer">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Digite sua mensagem...">
+                <button class="btn btn-primary" onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleChat() {
+            const chat = document.getElementById('chatWindow');
+            if (chat.style.display === 'flex') {
+                chat.style.display = 'none';
+            } else {
+                chat.style.display = 'flex';
+                // Foca no input quando abre
+                setTimeout(() => document.querySelector('.chat-footer input').focus(), 100);
+            }
+        }
+
+        function sendMessage() {
+            const input = document.querySelector('.chat-footer input');
+            const body = document.getElementById('chatBody');
+            const text = input.value;
+
+            if (text.trim() === "") return;
+
+            // Adiciona mensagem do usuário
+            const userMsg = document.createElement('div');
+            userMsg.className = 'msg msg-user';
+            userMsg.innerText = text;
+            body.appendChild(userMsg);
+
+            input.value = '';
+            body.scrollTop = body.scrollHeight; // Rola para baixo
+
+            // Simula resposta da IA ou Humano
+            setTimeout(() => {
+                const botMsg = document.createElement('div');
+                botMsg.className = 'msg msg-bot';
+                
+                // Respostas simples simuladas
+                if (text.toLowerCase().includes('assembleia')) {
+                    botMsg.innerHTML = "A próxima assembleia deve ser híbrida! Estamos lutando por isso. Quer falar com um diretor?";
+                } else if (text.toLowerCase().includes('falar') || text.toLowerCase().includes('humano')) {
+                    botMsg.innerHTML = "Estou transferindo para o <strong>Rafa Jamur</strong> ou outro camarada disponível... Aguarde um instante.";
+                } else {
+                    botMsg.innerHTML = "Entendi. Vou registrar essa demanda no nosso sistema unificado. Juntos somos fortes! ✊";
+                }
+                
+                body.appendChild(botMsg);
+                body.scrollTop = body.scrollHeight;
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
