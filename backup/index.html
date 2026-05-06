@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bora Lutar | Agregador de Vidas Reais</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .bg-grain {
+            background-color: #111;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-grain text-gray-100 min-h-screen flex flex-col justify-between">
+
+    <nav class="w-full p-6 flex justify-between items-center border-b border-gray-800">
+        <div class="text-xl font-bold tracking-tighter">BORALUTAR<span class="text-red-600">.</span></div>
+        <div class="text-sm text-gray-400">Desde sempre. Para sempre.</div>
+    </nav>
+
+    <main class="flex-grow container mx-auto px-6 py-12 md:py-20 max-w-4xl">
+        
+        <header class="mb-16">
+            <h1 class="text-5xl md:text-7xl font-black leading-tight mb-6">
+                A vida não se resolve <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-600">no automático.</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 font-light leading-relaxed max-w-2xl">
+                Aqui a gente mistura Paulo Freire com Racionais. O Evangelho puro com a ciência de Carl Hart. 
+                Porque lutar não é só sobreviver. É escrever a própria história, é ter onde morar, é assumir seus deveres.
+            </p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <!--
+            <a href="livro/index.html" class="group block p-8 border border-gray-700 hover:border-red-600 transition-all duration-300 bg-gray-900 bg-opacity-50">
+                <div class="mb-4 text-red-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                    </svg>
+                </div>
+                <h2 class="text-2xl font-bold mb-2 group-hover:text-red-500 transition-colors">O Livro</h2>
+                <p class="text-gray-400">Escreve a porra do livro. Minhas anotações, dores e a busca por sentido. Clarice Lispector encontra o asfalto.</p>
+            </a>
+            -->
+
+            <a href="morar/index.html" class="group block p-8 border border-gray-700 hover:border-blue-500 transition-all duration-300 bg-gray-900 bg-opacity-50">
+                <div class="mb-4 text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                </div>
+                <h2 class="text-2xl font-bold mb-2 group-hover:text-blue-500 transition-colors">Morar</h2>
+                <p class="text-gray-400">Não é só teto. É lar. É dignidade. O projeto de habitação com a alma da Escola da Ponte.</p>
+            </a>
+
+            <a href="semct/index.html" class="group block p-8 border border-gray-700 hover:border-green-500 transition-all duration-300 bg-gray-900 bg-opacity-50">
+                <div class="mb-4 text-green-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <h2 class="text-2xl font-bold mb-2 group-hover:text-green-500 transition-colors">Sem CT</h2>
+                <p class="text-gray-400">A visão sobre drogas e comportamento. Anna Lembke e a verdade nua e crua.</p>
+            </a>
+
+            <a href="noias/index.html" class="group block p-8 border border-gray-700 hover:border-purple-500 transition-all duration-300 bg-gray-900 bg-opacity-50">
+                <div class="mb-4 text-purple-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                </div>
+                <h2 class="text-2xl font-bold mb-2 group-hover:text-purple-500 transition-colors">N.O.I.A.S.</h2>
+                <p class="text-gray-400">Núcleo Omni-Channel Inclusivo de Assistência Social. A ponte entre quem precisa de ajuda e a rede de psicólogos, assistentes e voluntários.</p>
+            </a>
+
+            <a href="deveres/index.html" class="group block p-8 border border-gray-700 hover:border-amber-500 transition-all duration-300 bg-gray-900 bg-opacity-50 md:col-span-2">
+                <div class="mb-4 text-amber-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                    </svg>
+                </div>
+                <h2 class="text-2xl font-bold mb-2 group-hover:text-amber-500 transition-colors">Carta dos Deveres</h2>
+                <p class="text-gray-400">Não existe direito sem responsabilidade. O manifesto da maturidade humana. Mobile first, pra ler em qualquer lugar.</p>
+            </a>
+
+            <div class="md:col-span-2 p-8 border border-dashed border-gray-800 text-gray-500 flex flex-col items-center justify-center text-center">
+                <p class="italic text-sm mb-2">"Somos apenas latino-americanes..."</p>
+                <div class="text-xs font-mono uppercase tracking-widest">
+                    Freire • Jesus • Maté • Tupac • Saramago • Você
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="w-full py-8 text-center text-gray-600 text-sm border-t border-gray-900">
+        <p>&copy; 2025 Bora Lutar. Curitiba, PR. Feito com a verdade que liberta.</p>
+    </footer>
+
+    <script>
+      (function(d,t) {
+        var BASE_URL="https://chat.aiprati.com.br";
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=BASE_URL+"/packs/js/sdk.js";
+        g.async = true;
+        s.parentNode.insertBefore(g,s);
+        g.onload=function(){
+          window.chatwootSDK.run({
+            websiteToken: 'NHx6pkzyys1TixJ66rdDN6Da',
+            baseUrl: BASE_URL
+          })
+        }
+      })(document,"script");
+    </script>
+
+</body>
+</html>
