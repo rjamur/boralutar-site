@@ -1,1 +1,211 @@
-opa
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L54EQJ2N41"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L54EQJ2N41');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bora Lutar | Base de Operações e Resistência</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0d1117; /* GitHub Dark / Terminal */
+            color: #c9d1d9;
+        }
+        .font-mono {
+            font-family: 'Fira Code', monospace;
+        }
+        .font-serif {
+            font-family: 'Lora', serif;
+        }
+        .glitch-hover:hover {
+            animation: glitch-skew 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+            color: #ff7b72;
+        }
+        @keyframes glitch-skew {
+            0% { transform: skew(0deg); }
+            20% { transform: skew(-10deg); }
+            40% { transform: skew(10deg); }
+            60% { transform: skew(-5deg); }
+            80% { transform: skew(5deg); }
+            100% { transform: skew(0deg); }
+        }
+        .cursor-blink {
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        /* Efeito de card interativo para os links */
+        .module-card {
+            transition: all 0.2s ease;
+        }
+        .module-card:hover {
+            transform: translateY(-2px);
+            border-color: #58a6ff;
+            box-shadow: 0 4px 12px rgba(88, 166, 255, 0.1);
+        }
+        ::selection {
+            background-color: #ff7b72;
+            color: #0d1117;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-mono">
+
+    <!-- Header Principal -->
+    <header class="w-full bg-[#010409] border-b border-[#30363d] py-6 px-6">
+        <div class="max-w-4xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                <span class="ml-4 text-gray-400 font-bold tracking-wider">root@boralutar:~#</span>
+            </div>
+            <div class="text-xs text-gray-500">
+                Uptime: <span class="text-green-400">Resistindo</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="flex-grow max-w-4xl mx-auto px-6 py-12 w-full">
+
+        <!-- Intro -->
+        <div class="mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 glitch-hover">
+                boralutar<span class="text-[#ff7b72]">.com.br</span>
+            </h1>
+            <p class="text-gray-400 text-sm md:text-base max-w-2xl leading-relaxed">
+                Repositório de sobrevivência, reflexão e denúncia. Quando o Estado falha e a rua cobra, a gente documenta o código-fonte da realidade. Bem-vindo à base.
+            </p>
+        </div>
+
+        <!-- Destaque: Manifesto Recente -->
+        <section class="mb-16">
+            <div class="flex items-center gap-2 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff7b72" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v4"></path><polyline points="14 2 14 8 20 8"></polyline><path d="M2 15h10"></path><path d="m9 18 3-3-3-3"></path></svg>
+                <h2 class="text-xl text-white font-semibold uppercase tracking-wider">Execute / Latest_Log</h2>
+            </div>
+
+            <a href="/o-bug-do-estado/" class="block bg-[#161b22] border border-[#ff7b72] rounded-md p-6 md:p-8 hover:bg-[#1c2128] transition-colors relative overflow-hidden group">
+                <div class="absolute top-0 left-0 w-1 h-full bg-[#ff7b72]"></div>
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <div class="text-xs text-[#ff7b72] mb-2 font-bold tracking-widest uppercase">>>> Flagrante Sistema Crítico</div>
+                        <h3 class="font-serif text-2xl md:text-3xl text-white mb-3 group-hover:text-[#58a6ff] transition-colors">O Bug do Estado e a Lei da Selva</h3>
+                        <p class="font-serif text-gray-400 text-base md:text-lg">Quando a burocracia protege o opressor e o asfalto engole o Direito. O relato do esbulho.</p>
+                    </div>
+                    <div class="shrink-0 text-[#58a6ff] opacity-80 group-hover:opacity-100 group-hover:translate-x-1 transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </div>
+                </div>
+            </a>
+        </section>
+
+        <!-- Índice do Sistema / Outras Páginas -->
+        <section>
+            <div class="flex items-center gap-2 mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3fb950" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+                <h2 class="text-xl text-white font-semibold uppercase tracking-wider">Módulos do Sistema</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                <a href="/livro/" class="module-card bg-[#0d1117] border border-[#30363d] rounded-md p-5 flex items-start gap-4">
+                    <div class="p-2 bg-[#161b22] rounded text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-[#58a6ff] font-bold text-lg mb-1">/livro</h3>
+                        <p class="text-gray-500 text-sm leading-snug">"Escreve a porra do livro". O processo de documentar o indocumentável.</p>
+                    </div>
+                </a>
+
+                <a href="/ocupa/" class="module-card bg-[#0d1117] border border-[#30363d] rounded-md p-5 flex items-start gap-4">
+                    <div class="p-2 bg-[#161b22] rounded text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-[#58a6ff] font-bold text-lg mb-1">/ocupa</h3>
+                        <p class="text-gray-500 text-sm leading-snug">Ocupação, resistência e o direito fundamental ao refúgio.</p>
+                    </div>
+                </a>
+
+                <a href="/morar/" class="module-card bg-[#0d1117] border border-[#30363d] rounded-md p-5 flex items-start gap-4">
+                    <div class="p-2 bg-[#161b22] rounded text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><path d="M9 3v18"></path><path d="M15 3v18"></path><path d="M3 9h18"></path><path d="M3 15h18"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-[#58a6ff] font-bold text-lg mb-1">/morar</h3>
+                        <p class="text-gray-500 text-sm leading-snug">A guerra pela posse e asfalto frio. Quem é dono de quê?</p>
+                    </div>
+                </a>
+
+                <a href="/deveres/" class="module-card bg-[#0d1117] border border-[#30363d] rounded-md p-5 flex items-start gap-4">
+                    <div class="p-2 bg-[#161b22] rounded text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-[#58a6ff] font-bold text-lg mb-1">/deveres</h3>
+                        <p class="text-gray-500 text-sm leading-snug">Deveres do Estado, nossos direitos e a falha no contrato social.</p>
+                    </div>
+                </a>
+
+                <a href="/noias/" class="module-card bg-[#0d1117] border border-[#30363d] rounded-md p-5 flex items-start gap-4">
+                    <div class="p-2 bg-[#161b22] rounded text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-[#58a6ff] font-bold text-lg mb-1">/noias</h3>
+                        <p class="text-gray-500 text-sm leading-snug">Reflexões, loops mentais, CID e sobrevivência psicológica.</p>
+                    </div>
+                </a>
+
+                <a href="/resgate/" class="module-card bg-[#0d1117] border border-[#30363d] rounded-md p-5 flex items-start gap-4">
+                    <div class="p-2 bg-[#161b22] rounded text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-[#58a6ff] font-bold text-lg mb-1">/resgate</h3>
+                        <p class="text-gray-500 text-sm leading-snug">Operações de resgate de si mesmo e daquilo que importa.</p>
+                    </div>
+                </a>
+
+                <!-- Links secundários (sem ícones elaborados para não poluir) -->
+                <div class="col-span-1 md:col-span-2 mt-4 flex flex-wrap gap-4 text-sm">
+                    <span class="text-gray-600">Mais diretórios:</span>
+                    <a href="/semct/" class="text-[#79c0ff] hover:text-white underline decoration-[#30363d] underline-offset-4">/semct</a>
+                    <a href="/tampa/" class="text-[#79c0ff] hover:text-white underline decoration-[#30363d] underline-offset-4">/tampa</a>
+                    <a href="/chat/" class="text-[#79c0ff] hover:text-white underline decoration-[#30363d] underline-offset-4">/chat</a>
+                    <a href="/backup/" class="text-gray-500 hover:text-white transition-colors">/backup</a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-[#010409] border-t border-[#30363d] py-8 text-center mt-auto">
+        <p class="text-gray-600 mb-2">
+            Sistema operacional mantido por Rafael Jamur.
+        </p>
+        <p class="text-xs text-gray-700">
+            "A fúria é cega, a razão é fria." <span class="cursor-blink font-bold text-[#ff7b72]">_</span>
+        </p>
+    </footer>
+
+</body>
+</html>
