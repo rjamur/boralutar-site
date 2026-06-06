@@ -27,9 +27,6 @@
             color: var(--text);
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.5;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
         }
 
         /* SEÇÃO 1: O LAMBE-LAMBE (HERO) */
@@ -126,10 +123,10 @@
 
         /* SEÇÃO 2: O MANIFESTO / CONTEXTO */
         .manifesto {
+            min-height: 100vh;
             padding: 4rem 1.5rem;
             background-color: #111;
             border-top: 4px solid var(--accent-red);
-            flex-grow: 1;
         }
 
         .manifesto-content {
@@ -155,39 +152,6 @@
             color: white;
             background-color: rgba(230, 0, 0, 0.2);
             padding: 0 0.2rem;
-        }
-
-        /* SEÇÃO 3: RODAPÉ DE AUTONOMIA */
-        .footer-autonomia {
-            background-color: #000;
-            border-top: 2px dashed #333;
-            padding: 2rem 1.5rem;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 800px;
-            margin: 0 auto;
-            color: #888;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .footer-content strong {
-            color: #ccc;
-        }
-
-        .footer-link {
-            color: var(--accent-red);
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.2s;
-        }
-
-        .footer-link:hover {
-            color: var(--accent-yellow);
-            text-decoration: underline;
         }
 
         @media (min-width: 768px) {
@@ -222,7 +186,7 @@
         </div>
     </section>
 
-    <!-- SEGUNDA TELA: CONTEXTO -->
+    <!-- SEGUNDA TELA: CONTEXTO (Só vê quem rolar a página) -->
     <section id="nossa-luta" class="manifesto">
         <div class="manifesto-content">
             <h3>Por que ocupamos?</h3>
@@ -248,16 +212,6 @@
             </a>
         </div>
     </section>
-
-    <!-- TERCEIRA TELA: RODAPÉ DE AUTONOMIA -->
-    <footer class="footer-autonomia">
-        <div class="footer-content">
-            <p><strong>Nota de Autonomia:</strong> Esta página é uma ferramenta de guerrilha digital criada de forma independente por <strong>Rafael Jamur</strong>, morador, em apoio à ocupação. Ela não responde oficialmente pela assembleia do movimento.</p>
-            <p style="margin-top: 1rem;">
-                Desenvolvido por <a href="https://rafajamur.com.br" target="_blank" rel="noopener noreferrer" class="footer-link">rafajamur.com.br</a>
-            </p>
-        </div>
-    </footer>
 
 </body>
 </html>

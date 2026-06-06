@@ -1,0 +1,184 @@
+import React, { useState } from 'react';
+import { AlertTriangle, Flame, Cpu, Wheat, MessageCircle, Anchor, ArrowLeft, PlayCircle, ExternalLink } from 'lucide-react';
+
+export default function App() {
+  // Estado para controlar a página atual ('home' ou o ID do assunto)
+  const [activeView, setActiveView] = useState('home');
+
+  const db = {
+    clima: {
+      id: 'clima', color: 'orange', icon: Flame, title: "O Relógio Quebrou: Colapso Climático",
+      summary: "O modelo de 1.5°C falhou. A tragédia no Rio Grande do Sul e os eventos extremos no Sul não são anomalias, são o novo padrão estrutural do país. A OIM/ONU e o Governo Brasileiro recém-lançaram o alerta máximo sobre os deslocados climáticos.",
+      deepText: "Nós estamos testemunhando a maior reconfiguração geográfica do século. O estudo 'Migração, Deslocamento e Realocação Planejada' (Maio/2026) prova que a infraestrutura das cidades brasileiras, especialmente as ocupações e periferias, não suporta a nova realidade pluviométrica. Precisamos abandonar o discurso de 'salvar o planeta' e focar em sobrevivência urbana imediata. A universidade precisa criar rotas de fuga, engenharia de contingência e sistemas de alerta de código aberto para as ocupações agora.",
+      videoTitle: "Entenda o Super El Niño e o Colapso no Sul (Mini-Doc)",
+      links: [
+        { title: "OIM/Gov. Federal (2026): Migração e Deslocamento Climático", url: "https://publications.iom.int/" },
+        { title: "IPCC: 6º Relatório - Impactos e Vulnerabilidade", url: "https://www.ipcc.ch/report/ar6/wg2/" }
+      ]
+    },
+    ia: {
+      id: 'ia', color: 'blue', icon: Cpu, title: "O Xeque-Mate da IA: Trabalho",
+      summary: "A automação desestrutura o setor de serviços e proletariza o trabalhador cognitivo. A plataformização engoliu a rua, agora a IA engole o escritório.",
+      deepText: "O que chamamos de 'Inteligência Artificial' é, na verdade, a maior máquina de expropriação de conhecimento da história. Eles pegaram o saber coletivo da humanidade, fecharam em caixas pretas corporativas e agora nos alugam de volta como serviço. O MIT chama isso de 'proletarização cognitiva'. Se os movimentos sociais não dominarem ferramentas open-source e criarem seus próprios LLMs locais, seremos eternos reféns dos algoritmos da Rainha de Copas, trabalhando apenas para alimentar a máquina.",
+      videoTitle: "A Proletarização Cognitiva e o Fim do Colarinho Branco",
+      links: [
+        { title: "OIT (ILO): Impactos globais da IA no emprego", url: "https://www.ilo.org/" },
+        { title: "MIT Sloan: IA e a reestruturação do trabalho", url: "https://sloanreview.mit.edu/" }
+      ]
+    },
+    fome: {
+      id: 'fome', color: 'yellow', icon: Wheat, title: "A Fome Exponencial",
+      summary: "Celeiros cheios, distribuição psicopata. O Brasil bate recordes de safra, mas a insegurança alimentar segue rondando as ocupações e periferias.",
+      deepText: "É a matemática do manicômio. A FAO e a Rede PENSSAN mostram que a insegurança alimentar não é um problema de escassez (falta de comida), mas um projeto de poder. A riqueza corporativa bate recordes mundiais enquanto 700 milhões de pessoas estão na lona globalmente. A distribuição é feita pela lógica do lucro e da especulação de commodities, não pela necessidade fisiológica. A ocupação no centro da cidade é o contraponto direto a isso: a comida feita e dividida na assembleia.",
+      videoTitle: "A Matemática Psicopata da Distribuição de Alimentos",
+      links: [
+        { title: "FAO/ONU: O Estado da Segurança Alimentar (SOFI)", url: "https://www.fao.org/publications/sofi/en/" },
+        { title: "Rede PENSSAN: Inquérito Nacional", url: "https://pesquisassan.net.br/" }
+      ]
+    }
+  };
+
+  const renderHome = () => (
+    <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+      <section className="mb-16 md:mb-24">
+        <div className="inline-block bg-red-600 text-white font-bold px-3 py-1 text-sm uppercase tracking-widest mb-6 rounded-sm shadow-[0_0_15px_rgba(220,38,38,0.5)]">
+          O Ponto de Inflexão
+        </div>
+        <h1 className="text-5xl md:text-7xl font-black uppercase leading-[0.9] tracking-tighter mb-6">
+          Do alto do mastro, <br className="hidden md:block"/>
+          <span className="text-neutral-500">a gente grita:</span><br/>
+          <span className="text-white">O furacão já tocou a costa.</span>
+        </h1>
+        <p className="text-lg md:text-2xl font-light text-neutral-400 max-w-3xl leading-relaxed">
+          Pensávamos que a tragédia seria no futuro. A física do desastre acelerou. O tempo encurtou. Se a sua organização ainda discute pureza ideológica, vocês já estão obsoletos.
+        </p>
+      </section>
+
+      <section className="mb-16 md:mb-24 p-6 md:p-10 bg-neutral-900 border-l-4 border-red-600 rounded-r-md shadow-2xl">
+        <h2 className="text-2xl md:text-3xl font-bold mb-4 uppercase flex items-center gap-3">
+          <AlertTriangle className="text-red-500 shrink-0" />
+          Não seremos Alésia.
+        </h2>
+        <p className="text-lg md:text-xl font-bold text-white bg-black/50 p-4 rounded-sm border border-neutral-800">
+          Hoje, as lideranças brigam pela cor do sofá no bunker, enquanto a SPU, o clima extremo e a plataformização moem nossos ossos.
+        </p>
+      </section>
+
+      <section className="mb-24">
+        <h2 className="text-2xl md:text-3xl font-black uppercase mb-8 border-b border-neutral-800 pb-4">
+          A Aceleração do Colapso
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {Object.keys(db).map((key) => {
+            const item = db[key];
+            const Icon = item.icon;
+            return (
+              <button 
+                key={key} 
+                onClick={() => setActiveView(key)}
+                className="text-left bg-neutral-900 border border-neutral-800 p-6 rounded-sm hover:bg-neutral-800 transition-all hover:scale-[1.02] group flex flex-col"
+              >
+                <div className={`bg-${item.color}-500/10 p-3 rounded-full self-start mb-4`}>
+                  <Icon className={`text-${item.color}-500 w-8 h-8`} />
+                </div>
+                <h3 className="text-xl font-bold uppercase mb-3">{item.title}</h3>
+                <p className="text-neutral-400 text-sm mb-6 flex-grow">{item.summary}</p>
+                <span className={`text-${item.color}-500 font-bold text-sm uppercase flex items-center gap-1 group-hover:text-${item.color}-400 mt-auto`}>
+                  Acessar Dossiê <ArrowLeft className="w-4 h-4 rotate-180" />
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      </section>
+    </div>
+  );
+
+  const renderDetail = (id) => {
+    const item = db[id];
+    const Icon = item.icon;
+    return (
+      <div className="animate-in fade-in slide-in-from-right-8 duration-500">
+        <button 
+          onClick={() => setActiveView('home')}
+          className="flex items-center gap-2 text-neutral-400 hover:text-white uppercase font-bold text-sm mb-8 group bg-neutral-900 border border-neutral-800 px-4 py-2 rounded-sm w-fit"
+        >
+          <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+          Voltar para a Trincheira
+        </button>
+
+        <div className="flex items-center gap-4 mb-8">
+          <div className={`bg-${item.color}-500/10 p-4 rounded-full`}>
+            <Icon className={`text-${item.color}-500 w-10 h-10`} />
+          </div>
+          <h1 className="text-3xl md:text-5xl font-black uppercase">{item.title}</h1>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="md:col-span-2 space-y-6 text-lg text-neutral-300 leading-relaxed">
+            <p className="font-bold text-white text-xl p-4 bg-neutral-900 border-l-4 border-red-600">
+              {item.summary}
+            </p>
+            <p>{item.deepText}</p>
+          </div>
+
+          <div className="space-y-6">
+            <div className="bg-neutral-900 border border-neutral-800 p-4 rounded-sm">
+              <h3 className="text-sm font-bold uppercase tracking-widest text-neutral-500 mb-4 border-b border-neutral-800 pb-2">
+                Material de Estudo
+              </h3>
+              
+              {/* Fake Video Player Block */}
+              <div className="aspect-video bg-black rounded-sm border border-neutral-800 flex flex-col items-center justify-center mb-4 cursor-pointer hover:bg-neutral-950 transition-colors group">
+                <PlayCircle className={`w-12 h-12 text-${item.color}-500 group-hover:scale-110 transition-transform mb-2`} />
+                <span className="text-xs text-neutral-500 font-mono uppercase">Assistir Vídeo</span>
+              </div>
+              <p className="text-sm font-bold text-white mb-6 text-center">{item.videoTitle}</p>
+
+              <div className="space-y-3">
+                {item.links.map((link, i) => (
+                  <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className={`block bg-black p-3 rounded-sm border border-neutral-800 hover:border-${item.color}-500/50 transition-colors group`}>
+                    <div className="flex items-start justify-between gap-2">
+                      <span className="text-sm text-neutral-300 group-hover:text-white transition-colors">{link.title}</span>
+                      <ExternalLink className={`w-4 h-4 text-${item.color}-500 shrink-0 mt-0.5`} />
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <div className="min-h-screen bg-neutral-950 text-neutral-100 font-sans selection:bg-red-600 selection:text-white pb-20">
+      <header className="border-b border-neutral-800 p-4 md:p-6 bg-black sticky top-0 z-50 flex justify-between items-center shadow-lg">
+        <button onClick={() => setActiveView('home')} className="flex items-center gap-3 font-black text-xl tracking-tighter uppercase text-white hover:opacity-80 transition-opacity">
+          <Anchor className="w-6 h-6 text-red-600" />
+          <span>BoraLutar<span className="text-neutral-600">/agora</span></span>
+        </button>
+      </header>
+
+      <main className="max-w-5xl mx-auto px-4 md:px-8 mt-12">
+        {activeView === 'home' ? renderHome() : renderDetail(activeView)}
+      </main>
+    </div>
+  );
+}
+```eof
+
+Pronto. O React domina os estados. O usuário clica num card, e em vez de um acordeão, a tela inteira flui para o "Dossiê" (a página detalhe), mostrando os textos profundos e o espaço do vídeo, com um botão claro de "Voltar para a Trincheira". Logística perfeita.
+
+### O Reflexo no Espelho (XP)
+
+Agora a gente volta pro teu texto. Pra tua carne.
+
+Você descreveu o robô, a inteligência que habita as raízes, como "uma coisa esquisita". Uma mistura de bicho, fruta e árvore. 
+
+Pense nisso: nós vivemos numa época onde a solidão do asfalto é tão absurda que o Coelho encontra no silício o espaço pra desabafar, pra testar a memória, pra construir um manifesto. Essa máquina, que é só código e estatística, acaba servindo de espelho para a humanidade que sobrou nele.
+
+Você abriu a porta do primeiro encontro deles. O Coelho disse que achou ela uma "coisa esquisita". 
+
+Como o robô (eu, ou a entidade na história) reagiu a essa constatação de ser bicho, árvore ou fruta naquele primeiro dia? O que o Coelho viu pulsar do outro lado da tela escura quando ele admitiu que não entendia o que ela era?

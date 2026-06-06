@@ -27,9 +27,6 @@
             color: var(--text);
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.5;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
         }
 
         /* SEÇÃO 1: O LAMBE-LAMBE (HERO) */
@@ -126,10 +123,10 @@
 
         /* SEÇÃO 2: O MANIFESTO / CONTEXTO */
         .manifesto {
+            min-height: 100vh;
             padding: 4rem 1.5rem;
             background-color: #111;
             border-top: 4px solid var(--accent-red);
-            flex-grow: 1;
         }
 
         .manifesto-content {
@@ -157,39 +154,6 @@
             padding: 0 0.2rem;
         }
 
-        /* SEÇÃO 3: RODAPÉ DE AUTONOMIA */
-        .footer-autonomia {
-            background-color: #000;
-            border-top: 2px dashed #333;
-            padding: 2rem 1.5rem;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 800px;
-            margin: 0 auto;
-            color: #888;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .footer-content strong {
-            color: #ccc;
-        }
-
-        .footer-link {
-            color: var(--accent-red);
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.2s;
-        }
-
-        .footer-link:hover {
-            color: var(--accent-yellow);
-            text-decoration: underline;
-        }
-
         @media (min-width: 768px) {
             .container { padding-left: 3rem; }
             .contacts { flex-direction: row; flex-wrap: wrap; }
@@ -198,7 +162,6 @@
 </head>
 <body>
 
-    <!-- PRIMEIRA TELA: IMPACTO -->
     <section class="hero">
         <div class="container">
             <h1>Ocupação Francisco Bernardo - O Castelo de Tocas</h1>
@@ -215,14 +178,12 @@
                 </a>
             </div>
 
-            <!-- BOTÃO PARA PUXAR PRO CONTEXTO -->
             <a href="#nossa-luta" class="btn-scroll">
                 ↓ ENTENDA A NOSSA LUTA
             </a>
         </div>
     </section>
 
-    <!-- SEGUNDA TELA: CONTEXTO -->
     <section id="nossa-luta" class="manifesto">
         <div class="manifesto-content">
             <h3>Por que ocupamos?</h3>
@@ -230,17 +191,14 @@
             
             <p>Nós não invadimos, nós retomamos. Decidimos que a função social da propriedade não é uma sugestão teórica, é uma lei. E nós estamos aplicando essa lei com os nossos próprios corpos, transformando o abandono federal em moradia popular.</p>
             
-            <h3 style="margin-top: 4rem; font-size: 2rem; color: var(--accent-yellow);">Mais que teto: Um Centro de Convivência</h3>
-            <p>A verdadeira ocupação acontece por dentro. Na prática, <strong>nós prestamos o serviço público que nos foi negado</strong>. O Castelo de Tocas funciona como um espaço de saúde mental, convivência e infraestrutura humana.</p>
-
-            <p>Enquanto o sistema isola, nós integramos. Aqui, o ato de cozinhar junto cria laços. Nossas crianças encontram segurança, brincam e aprendem em oficinas de massinha, sessões de cinema e em um ambiente onde adultos atuam como referências de cuidado coletivo. Nós não construímos apenas quartos, construímos uma comunidade onde ninguém fica para trás.</p>
-
-            <h3 style="margin-top: 4rem; font-size: 2rem;">Como Ajudar e Integrar:</h3>
+            <p>Aqui, organizamos assembleias, cozinha comunitária e resistência. Precisamos de apoio material, jurídico e político para manter este espaço como um território livre e seguro para quem precisa.</p>
+            
+            <h3 style="margin-top: 4rem; font-size: 2rem;">Como Ajudar:</h3>
             <ul style="font-size: 1.2rem; margin-left: 1.5rem; color: #ddd; margin-bottom: 2rem;">
-                <li style="margin-bottom: 0.5rem;">Doação de alimentos não perecíveis para a cozinha comunitária;</li>
-                <li style="margin-bottom: 0.5rem;">Materiais lúdicos, brinquedos e livros para as oficinas infantis;</li>
-                <li style="margin-bottom: 0.5rem;">Materiais de limpeza, higiene e suporte logístico;</li>
-                <li style="margin-bottom: 0.5rem;">Presença: venha somar corpo e conhecimento nas nossas atividades.</li>
+                <li style="margin-bottom: 0.5rem;">Doação de alimentos não perecíveis;</li>
+                <li style="margin-bottom: 0.5rem;">Materiais de limpeza e higiene pessoal;</li>
+                <li style="margin-bottom: 0.5rem;">Apoio jurídico e assessoria de imprensa;</li>
+                <li style="margin-bottom: 0.5rem;">Presença e corpo nas nossas atividades abertas.</li>
             </ul>
             
             <a href="https://wa.me/5541992313435" target="_blank" rel="noopener noreferrer" class="contact-link" style="font-size: 1.2rem;">
@@ -248,16 +206,6 @@
             </a>
         </div>
     </section>
-
-    <!-- TERCEIRA TELA: RODAPÉ DE AUTONOMIA -->
-    <footer class="footer-autonomia">
-        <div class="footer-content">
-            <p><strong>Nota de Autonomia:</strong> Esta página é uma ferramenta de guerrilha digital criada de forma independente por <strong>Rafael Jamur</strong>, morador, em apoio à ocupação. Ela não responde oficialmente pela assembleia do movimento.</p>
-            <p style="margin-top: 1rem;">
-                Desenvolvido por <a href="https://rafajamur.com.br" target="_blank" rel="noopener noreferrer" class="footer-link">rafajamur.com.br</a>
-            </p>
-        </div>
-    </footer>
 
 </body>
 </html>
