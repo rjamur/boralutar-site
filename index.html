@@ -61,15 +61,26 @@
             padding-left: 1.5rem;
         }
 
-        h1 {
-            font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: 900;
-            line-height: 0.95;
-            margin-bottom: 1rem;
-            letter-spacing: -0.03em;
+	.institucional {
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            font-weight: 800;
+            color: var(--accent-red);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.2rem;
+            display: block;
         }
 
-        h2 {
+        h1 {
+            font-size: clamp(3.5rem, 10vw, 7.5rem); /* Aumentei o limite máximo para explodir na tela */
+            font-weight: 900;
+            line-height: 0.9;
+            margin-bottom: 1rem;
+            letter-spacing: -0.04em;
+            color: var(--text);
+        }
+
+	h2 {
             font-size: clamp(1.5rem, 4vw, 2.5rem);
             font-weight: 700;
             color: var(--accent-yellow);
@@ -211,12 +222,14 @@
 <body>
 
     <section class="hero">
-        <div class="container">
-            <h1>Ocupação Francisco Bernardo - O Castelo de Tocas</h1>
+	    <div class="container">
+            <!-- A chancela política menor e em vermelho -->
+            <span class="institucional">Ocupação Francisco Bernardo</span>
+            <!-- A identidade gritando na tela -->
+            <h1>O Castelo de Tocas</h1>
             <h2>Rua Dr. Faivre, 1212</h2>
-            
+
             <div class="impact-phrase">"Eu moro aqui."</div>
-            
             <div class="contacts">
                 <a href="https://wa.me/5541992313435" target="_blank" rel="noopener noreferrer" class="contact-link">
                     WhatsApp: (41) 99231-3435
