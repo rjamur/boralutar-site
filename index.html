@@ -27,34 +27,37 @@
 </head>
 <body class="antialiased selection:bg-red-600 selection:text-white flex flex-col min-h-screen">
 
-    <!-- Hero Section -->
-    <header class="relative bg-zinc-950 pt-24 pb-16 px-6 border-b-8 border-red-600 overflow-hidden">
-        <!-- Background grunge/noise effect simulated with CSS gradients -->
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-red-600 via-transparent to-transparent"></div>
-        
-        <div class="relative max-w-5xl mx-auto text-center">
-            <h1 class="text-6xl md:text-8xl lg:text-9xl text-white leading-none mb-4 uppercase drop-shadow-lg">
-                A Máquina de <br/>
-                <span class="text-red-600">Moer Gente</span>
-            </h1>
+<!-- Hero Section -->
+<header class="relative bg-zinc-950 pt-24 pb-16 px-6 border-b-8 border-red-600 overflow-hidden">
+    <!-- Background grunge/noise effect simulated with CSS gradients -->
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-red-600 via-transparent to-transparent"></div>
+    
+    <!-- z-10 garante que o conteúdo fique POR CIMA do fundo, fazendo o link ser clicável -->
+    <div class="relative z-10 max-w-5xl mx-auto text-center">
+        <h1 class="text-6xl md:text-8xl lg:text-9xl text-white leading-none mb-4 uppercase drop-shadow-lg">
+            A Máquina de <br/>
+            <span class="text-red-600">Moer Gente</span>
+        </h1>
 
+        <p class="font-title text-3xl md:text-5xl text-zinc-400 uppercase mt-4 mb-8">
+            E a resistência na Francisco Bernardo
+        </p>
 
-  <p style="margin-top: 15px; font-weight: bold; font-size: 1.1em; color: #333;">
-    Moradia não é crime. Despejo é barbárie.
-  </p>
-</div>
-
-<div style="text-align: center; margin: 30px 0;">
-  <a href="https://photos.app.goo.gl/WP4WxY1YSheZ5Lgp7" target="_blank" rel="noopener noreferrer" style="background-color: #cc0000; color: #ffffff; padding: 15px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; font-size: 1.2em; display: inline-block; text-transform: uppercase; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
-    📸 Acompanhe o Front: Fotos e Vídeos da Ocupação
-  </a>
-</div>
-
-            <p class="font-title text-3xl md:text-5xl text-zinc-400 uppercase mt-4">
-                E a resistência na Francisco Bernardo
-            </p>
+        <!-- O Botão do Front -->
+        <div class="my-10">
+            <a href="https://photos.app.goo.gl/WP4WxY1YSheZ5Lgp7" target="_blank" rel="noopener noreferrer" style="background-color: #cc0000; box-shadow: 0 4px 6px rgba(0,0,0,0.5);" class="inline-block text-white font-bold py-4 px-8 rounded text-xl uppercase transition transform hover:scale-105 border-2 border-red-800">
+                📸 Acompanhe o Front: Fotos e Vídeos da Ocupação
+            </a>
         </div>
-    </header>
+
+        <!-- Corrigido para texto claro (text-zinc-300) para dar leitura no fundo escuro -->
+        <p class="mt-6 font-bold text-xl text-zinc-300 uppercase tracking-widest">
+            Moradia não é crime. Despejo é barbárie.
+        </p>
+    </div> <!-- AQUI encerra o container do texto -->
+</header>
+
+ 
 
     <!-- Content Section -->
     <main class="flex-grow max-w-3xl mx-auto px-6 py-16 text-lg md:text-xl leading-relaxed space-y-8">
