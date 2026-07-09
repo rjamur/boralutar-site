@@ -1,0 +1,102 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marmitas da Terra</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        terra: {
+                            50: '#fdfdf7',  // Off-white base
+                            600: '#5a6c57', // Verde terra primário
+                            700: '#3d4a3b', // Verde escuro para texto
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-terra-50 text-terra-700 font-sans">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm p-4 sticky top-0 z-50">
+        <nav class="max-w-5xl mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold text-terra-600">Marmitas da Terra</h1>
+            <button class="bg-terra-600 text-white px-6 py-2 rounded-full font-medium hover:bg-terra-700 transition">Doar</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="max-w-5xl mx-auto px-4 py-16 text-center">
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-6">Solidariedade é Resistência</h2>
+        <p class="text-lg mb-8 text-gray-600 max-w-2xl mx-auto">Levando alimento, dignidade e esperança para quem mais precisa, unindo mãos em prol de um futuro mais justo.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button class="border-2 border-terra-600 text-terra-600 px-8 py-3 rounded-full font-semibold hover:bg-terra-600 hover:text-white transition">Seja Voluntário</button>
+            <button class="bg-terra-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-terra-700 transition">Nossa História</button>
+        </div>
+    </main>
+
+    <!-- Sobre -->
+    <section class="bg-white py-16 px-4">
+        <div class="max-w-3xl mx-auto bg-terra-50 p-8 rounded-2xl border border-terra-100 shadow-sm text-center">
+            <h3 class="text-2xl font-bold mb-4 text-terra-600">Nossa Missão</h3>
+            <p class="leading-relaxed">O projeto Marmitas da Terra nasceu do desejo de transformar a realidade de comunidades em vulnerabilidade. Acreditamos que a comida é o primeiro passo para a dignidade humana e que, juntos, podemos construir redes de apoio sólidas e duradouras.</p>
+        </div>
+    </section>
+
+    <!-- Acesso Rápido -->
+    <section class="max-w-5xl mx-auto py-16 px-4">
+        <h3 class="text-2xl font-bold text-center mb-10">Acesso Rápido</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <a href="https://www.whatsapp.com/catalog/554184776530/" target="_blank" class="block bg-white p-6 rounded-2xl shadow-sm border border-terra-100 hover:bg-terra-600 hover:text-white transition-all text-center font-medium">Loja do MST PR</a>
+            <a href="https://www.instagram.com/maossolidariasnacional/" target="_blank" class="block bg-white p-6 rounded-2xl shadow-sm border border-terra-100 hover:bg-terra-600 hover:text-white transition-all text-center font-medium">Campanha Mãos Solidárias</a>
+            <a href="https://mst.org.br/2025/02/17/cozinhas-solidarias-exemplo-de-resistencia-frente-ao-fracasso-do-neoliberalismo/" target="_blank" class="block bg-white p-6 rounded-2xl shadow-sm border border-terra-100 hover:bg-terra-600 hover:text-white transition-all text-center font-medium">Cozinhas Solidárias - MST</a>
+            <a href="#" class="block bg-white p-6 rounded-2xl shadow-sm border border-terra-100 hover:bg-terra-600 hover:text-white transition-all text-center font-medium">Inscrição: Roda de Conversa (CNV)</a>
+            <a href="#" class="block bg-white p-6 rounded-2xl shadow-sm border border-terra-100 hover:bg-terra-600 hover:text-white transition-all text-center font-medium">Votação Propulsão Comunica</a>
+            <a href="https://www.instagram.com/marmitas_daterra/" target="_blank" class="block bg-white p-6 rounded-2xl shadow-sm border border-terra-100 hover:bg-terra-600 hover:text-white transition-all text-center font-medium">Nosso Instagram</a>
+        </div>
+    </section>
+
+    <!-- Ações -->
+    <section class="bg-white py-16 px-4">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-3xl font-bold text-center mb-12">Nossas Ações</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-terra-50 p-6 rounded-xl shadow-md border-t-4 border-terra-600">
+                    <h4 class="text-xl font-bold mb-3">Cozinha Solidária</h4>
+                    <p class="text-sm">Produção diária de refeições nutritivas com ingredientes frescos e doações da agricultura familiar.</p>
+                </div>
+                <div class="bg-terra-50 p-6 rounded-xl shadow-md border-t-4 border-terra-600">
+                    <h4 class="text-xl font-bold mb-3">Distribuição</h4>
+                    <p class="text-sm">Logística estratégica para entregar marmitas onde a fome atinge com maior força.</p>
+                </div>
+                <div class="bg-terra-50 p-6 rounded-xl shadow-md border-t-4 border-terra-600">
+                    <h4 class="text-xl font-bold mb-3">Rodas de Conversa</h4>
+                    <p class="text-sm">Espaço de escuta ativa e fortalecimento dos vínculos comunitários e sociais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-terra-700 text-white py-10 px-4 text-center">
+        <div class="max-w-5xl mx-auto">
+            <p class="mb-4 font-bold text-lg">Associação Marmitas da Terra</p>
+            <div class="flex justify-center gap-6 mb-6">
+                <a href="#" class="hover:text-green-200">Instagram</a>
+                <a href="#" class="hover:text-green-200">Facebook</a>
+                <a href="#" class="hover:text-green-200">Contato</a>
+            </div>
+            <p class="text-sm opacity-80">© 2026 Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
