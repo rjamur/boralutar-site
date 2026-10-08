@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: livro
 title: "O Cansaço do Sentinela"
 date: 2026-10-07
 category: livro

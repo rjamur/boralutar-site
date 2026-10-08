@@ -1,6 +1,5 @@
-
 ---
-layout: post
+layout: livro
 title: "O Início do Fim"
 date: 2026-10-07
 category: livro
