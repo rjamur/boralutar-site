@@ -59,7 +59,7 @@ plugins:
 #   - vendor/ruby/
 
 collections:
-  livro:
+  diario:
     output: true
-    permalink: /livro/:title/
+    permalink: /diario/:title/
 
