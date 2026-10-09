@@ -2,7 +2,7 @@
 layout: diario
 title: "A Cara nas Costas (O Vaso Rachado)"
 date: 2026-10-08
-category: livro
+category: diario
 subtitle: "A sinceridade passada pelo fogo"
 ---
 

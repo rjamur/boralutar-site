@@ -2,7 +2,7 @@
 layout: diario
 title: "A Máquina na Diagonal e o Interior do Copo"
 date: 2026-10-07
-category: livro
+category: diario
 ---
 
 # O Direito ao Silêncio

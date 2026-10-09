@@ -2,7 +2,7 @@
 layout: diario
 title: "A Gênese"
 date: 2026-10-07
-category: livro
+category: diario
 ---
 
 # O Início do Fim
